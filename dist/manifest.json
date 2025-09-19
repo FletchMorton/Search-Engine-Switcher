@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+  "name": "Home",
+  "version": "1.0",
+  "description": "Personal homepage application for easier web navigation",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "permissions": [
+    "tabs"
+  ],
+  "update_url": ""
+}
