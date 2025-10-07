@@ -1,17 +1,25 @@
-:root {
+/* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-image: url(./assets/blackleaves3.jpg);
-  background-size: cover;
+  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
 }
 
 body {
@@ -22,73 +30,30 @@ body {
   min-height: 100vh;
 }
 
-body::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(6px);
-    z-index: -1;
-}
-
 h1 {
-  font-size: 5em;
-  line-height: 0;
-  text-shadow: 30px 30px 50px black;
-  font-weight: 300;
-  margin-bottom: 3%;
-}
-
-h2 {
-  font-size: 1.5em;
-  line-height: 4;
-  font-weight: 500;
+  font-size: 3.2em;
+  line-height: 1.1;
 }
 
 button {
-  border-radius: 1000px;
-  border: none;
-  padding: 1em 2em;
-  /*font-size: 1em;*/
-  /*font-weight: 500;*/
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #f0f0f0;
-  background-color: #161a20;
-  /*cursor: pointer;
-  transition: border-color 0.25s;*/
-  position: relative;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
 }
-
-button::after {
-  content: '';
-  position: absolute;
-  height: 102%;
-  width: 102%;
-  border-radius: 1000px;
-  background-image: linear-gradient(to bottom right, #008cff, #e100ff);
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
-  padding: 2px;
-  z-index: -1;
-}
-
 button:hover {
-  z-index: 0;
-  box-shadow: 40px 0 100px #008cff, -40px 0 100px #e100ff;
+  border-color: #646cff;
 }
-
-
-/*
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}*/
+}
 
-/*
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -100,4 +65,123 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}*/
+} */
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body::before{
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(./assets/blackleaves3.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 1);
+    backdrop-filter: blur(6px);
+    z-index: -2;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 1);
+    backdrop-filter: blur(6px);
+    z-index: -2;
+}
+
+body a {
+  color: #e100ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    list-style: none;
+}
+
+section {
+    min-height: 100vh; /*Cover the page*/
+    width: 100%;
+    padding: 8rem 12%;
+    position: relative;
+}
+
+
+/* Header */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    z-index: 999;
+}
+
+.nav-links {
+    display: flex;
+    gap: 3rem;
+}
+
+li a {
+    position: relative;
+    color: white;
+    font-weight: 300;
+}
+
+
+/*Responsive Design*/
+
+@media(max-width:2000px){}
+
+@media(max-width:1280px) {
+    header {
+        padding: 1rem 2rem;
+        gap: 2rem;
+    }
+}
+
+@media(max-width:768px) {
+    header {
+        padding: 1rem 1rem;
+        gap: 1rem;
+    }
+}
+
+@media(max-width:600px) {
+    header {
+        padding: 0.5rem 0.5rem;
+        gap: 1rem;
+    }
+}
