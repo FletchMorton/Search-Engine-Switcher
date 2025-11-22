@@ -1,7 +1,7 @@
 
-/*Contact Section*/
+/*Main Section*/
 
-.contact {
+.dock {
     padding: 30vh 12%;
 }
 
@@ -20,6 +20,7 @@
     font-size: 5.5rem;
     font-weight: 200;
     margin-bottom: 0rem;
+    text-shadow: black 1px 0 30px;
 }
 
 .date-text {
@@ -40,7 +41,7 @@
     -webkit-backdrop-filter: blur(10px);
     box-shadow: 0px 0 20px #e100ff;
     animation: lightpulse 5s infinite;
-    padding: 0.5rem 1.5rem;
+    padding: 0.4rem 1.5rem;
     width: 40vw;
     font-size: 1rem;
     color: #e100ff;
@@ -97,25 +98,29 @@
 @media(max-width:2500px){
     .input-box input {
         width: 45vw; /*This is a increase from 40vw*/
-        padding: 0.5rem 1.25rem; /*This is a decrease from 0.75rem 1.5rem */
+        padding: 0.4rem 1.25rem; /*This is a decrease from 0.75rem 1.5rem */
         font-size: 0.9rem;
     }
 }
 
 @media(max-width:2000px){
+    .dock {
+        padding: 20vh 12%;
+    }   
     .input-box input {
         width: 50vw; /*This is a increase from 40vw*/
-        padding: 0.5rem 1.25rem; /*This is a decrease from 0.75rem 1.5rem */
+        padding: 0.4rem 1.25rem; /*This is a decrease from 0.75rem 1.5rem */
         font-size: 0.9rem;
     }
 }
 
 @media(max-width:1280px) {
-    .contact {
+    .dock {
         padding: 20vh 12%;
     }   
     .input-box input {
         width: 60vw; /*This is a increase from 40vw */
+        padding: 0.3rem 1.25rem;
     }
     .input-box img {
         width: 2rem;
@@ -123,11 +128,12 @@
 }
 
 @media(max-width:768px) {
-    .contact {
+    .dock {
         padding: 5vh 12%;
     }   
     .input-box input {
         width: 70vw;
+        padding: 0.3rem 1.25rem;
     }
     .input-box img {
         display: none;

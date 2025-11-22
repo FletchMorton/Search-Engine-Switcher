@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from 'react'
 import './Search.css'
 import smarker from '../assets/marker.png'
-import Modal from '../components/modal.jsx'
+import Rain from '../components/rain.jsx'
 
 function Home() {
   const [count, setCount] = useState(0);
@@ -85,11 +85,16 @@ function Home() {
         break;
 
         case 1:
+          setEngine("Startpage");
+          setUrl('https://www.startpage.com/sp/search?query=');
+        break;
+
+        case 2:
           setEngine("Google");
           setUrl('https://www.google.com/search?q=');
         break;
 
-        case 2:
+        case 3:
           setCount((count) => 0);
           setEngine("PrivAU");
           setUrl('https://priv.au/search?q=');
@@ -133,7 +138,8 @@ function Home() {
   return (
     <>
     <head><title>Home</title></head>
-      <section className='contact' id='contact'>
+      <section className='dock' id='dock'>
+        <div className='rain-container'><Rain /></div>
         <div className="input-box">
           
           <h1 className='clock'>{currentTime}</h1>
@@ -171,6 +177,10 @@ function Home() {
 
                     case "/trans":
                       window.location.href = "https://translate.google.com/";
+                    break;
+
+                    case "/crono":
+                      window.location.href = "https://cronometer.com/";
                     break;
                   
                     default:

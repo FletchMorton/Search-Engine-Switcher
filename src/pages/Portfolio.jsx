@@ -3,6 +3,7 @@ import animelleImg from '../assets/animellegame.png'
 import retroImg from '../assets/RetroVault_Logo.jpg'
 import searchImg from '../assets/searcheng.png'
 import crudImg from '../assets/crudcon.png'
+import Rain from '../components/rain.jsx'
 
 function Portfolio() {
 
@@ -26,6 +27,8 @@ function Portfolio() {
           </li>
         </ul>
       </header>
+
+      <div className='rain-container'><Rain /></div>
 
       <section className='about' id='about'>
         <div className="about-container">

@@ -59,15 +59,15 @@
   left: 0.5%;
   border-radius: 1000px;
   border: none;
-  height: 2rem;
+  height: 1.75rem;
   width: 1rem;
   background-color: transparent;
 }
 
 .help img {
   border-radius: 1000px;
-  height: 2rem;
-  width: 2rem;
+  height: 1.75rem;
+  width: 1.75rem;
   translate: -10% -5%;
 }
 
